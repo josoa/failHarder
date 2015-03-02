@@ -33,3 +33,8 @@ body {
 	/*background: hsl(0, 0%, 80%);*/
 }
 
+/* Images */
+
+img {
+	max-width: 465px;
+}
