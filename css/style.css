@@ -151,6 +151,44 @@ ul {
 	padding: 3px;
 }
 
+[_text~="list"] > li a:hover, [_text~="list"] > li a:target {
+	color: hsl(0, 0%, 33%);
+	background: hsl(0, 0%, 13%);
+}
+
+[_text~="list"] > li a:active {
+	color: hsl(0, 0%, 100%);
+	background: hsl(0, 0%, 13%);
+}
+
+[_text~="discussion"] > li {
+	line-height: 1.3em;
+	margin-bottom: 15px;
+}
+
+[_text~="discussion"] > li a:link {
+	color: hsl(0, 0%, 13%);
+	border-bottom: solid 2px;
+}
+
+
+[_text~="discussion"] > li a:hover {
+	color: hsl(0, 0%, 33%);
+	border-bottom: solid 2px;
+}
+
+[_text~="discussion"] > li a:link:first-of-type {
+	color: hsl(0, 0%, 100%);
+	background: hsl(0, 0%, 13%);
+	padding: 2px;
+}
+
+[_text~="discussion"] > li a:hover:first-of-type {
+	color: hsl(0, 0%, 100%);
+	background: hsl(0, 0%, 33%);
+	padding: 2px;
+}
+
 [_text~="author"] {
 	font-size: 0.875em; /*14px*/
 	line-height: 1.4375em; /*23px*/
@@ -169,20 +207,17 @@ ul {
 	transform: scale(.85);
 }
 
-[_text~="sidebar"] > li a:link, [_text~="sidebar"] > li a:visited {
-	background: #068180;
-}
-
 /* Navigation */
 
 [_nav] {
 	font-size: 1.1em;
 	line-height: 1.75em;
-	font-weight: 700;
-	text-transform: uppercase;
+
 }
 
 [_nav~="main"]:link, [_nav~="main"]:visited {
+	font-weight: 700;
+	text-transform: uppercase;
 	color: hsl(0, 0%, 13%);
 }
 
@@ -192,6 +227,20 @@ ul {
 }
 
 [_nav~="main"]:target, [_nav~="main"]:active {
+	background: #F3CA16;
+}
+
+[_nav~="sidebar"]:link, [_nav~="sidebar"]:visited {
+	margin-right: 10px;
+	color: hsl(0, 0%, 33%);
+}
+
+[_nav~="sidebar"]:hover {
+	color: hsl(0, 0%, 100%);
+	background: hsl(0, 0%, 13%);
+}
+
+[_nav~="sidebar"]:target, [_nav~="sidebar"]:active {
 	background: #F3CA16;
 }
 
@@ -224,7 +273,7 @@ ul {
 [_form~="search"] input {
 	width: calc(65% - 15px);
 	height: 10px;
-	padding: 10px 15px;
+	padding: 10px;
 	border: 0;
 	background: #EEE;
 
