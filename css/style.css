@@ -125,6 +125,32 @@ ul {
 	margin-bottom: 15px;
 }
 
+[_text~="body"] a:link, [_text~="body"] a:visited {
+	color: hsl(0, 0%, 13%);
+	border-bottom: solid 2px; 
+}
+
+[_text~="body"] a:hover, [_text~="body"] a:target,  [_text~="body"] a:active {
+	color: hsl(0, 0%, 50%);
+	border-bottom: solid 3px; 
+}
+
+[_text~="list"] {
+	line-height: 1.5em;
+	padding-bottom: 15px;
+	/*font-weight: 700;*/
+}
+
+[_text~="list"] > li {
+	margin-bottom: 10px;
+}
+
+[_text~="list"] > li a:link, [_text~="list"] > li a:visited {
+	color: hsl(0, 0%, 100%);
+	background: hsl(0, 0%, 13%);
+	padding: 3px;
+}
+
 [_text~="author"] {
 	font-size: 0.875em; /*14px*/
 	line-height: 1.4375em; /*23px*/
@@ -140,10 +166,11 @@ ul {
 }
 
 [_text~="sidebar"] {
-	/*font-weight: 300;*/
-	/*color: hsl(0, 0%, 100%);*/
-	/*padding-right: 10px;*/
 	transform: scale(.85);
+}
+
+[_text~="sidebar"] > li a:link, [_text~="sidebar"] > li a:visited {
+	background: #068180;
 }
 
 /* Navigation */
@@ -183,16 +210,21 @@ ul {
 	padding-left: 15px;
 }
 
+[_img~="famous"] {
+	margin: 15px 0;
+}
+
 /* Form */
 
 [_form] {
 	width: (25% - 25px);
+	padding-bottom: 15px;
 }
 
 [_form~="search"] input {
-	width: 65%;
+	width: calc(65% - 15px);
 	height: 10px;
-	padding: 10px 5px;
+	padding: 10px 15px;
 	border: 0;
 	background: #EEE;
 
