@@ -48,8 +48,20 @@ body {
 	background: #068180;
 }
 
+[_col~="green"] {
+	background: #0EA642;
+}
+
+[_col~="black"] {
+	background: hsl(0, 0%, 13%);
+}
+
 [_col]:first-of-type {
 	margin-right: 25px;
+}
+
+[_col]:last-of-type {
+	/*border-left: solid 1px hsl(0, 0%, 13%);*/
 }
 
 /* Typography */
@@ -110,6 +122,7 @@ ul {
 	font-size: 1em; /*16px*/
 	line-height: 1.625em; /*26px*/
 	text-align: justify;
+	margin-bottom: 15px;
 }
 
 [_text~="author"] {
@@ -124,6 +137,13 @@ ul {
 	padding-left: 1em;
 	font-style: italic;
 	border-left: 2px solid #ccc;
+}
+
+[_text~="sidebar"] {
+	/*font-weight: 300;*/
+	/*color: hsl(0, 0%, 100%);*/
+	/*padding-right: 10px;*/
+	transform: scale(.85);
 }
 
 /* Navigation */
@@ -157,3 +177,47 @@ ul {
 [_img~="logo"] {
 	margin-bottom: 25px;
 }
+
+[_img~="sidebar"] {
+	padding-top: 10px;
+	padding-left: 15px;
+}
+
+/* Form */
+
+[_form] {
+	width: (25% - 25px);
+}
+
+[_form~="search"] input {
+	width: 65%;
+	height: 10px;
+	padding: 10px 5px;
+	border: 0;
+	background: #EEE;
+
+}
+
+[_form~="search"] input:focus {
+	background: #555;
+	outline: 0;
+}
+
+[_form~="search"] button {
+	float: right;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	height: 30px;
+	width: 25%;
+	color: white;
+	text-transform: uppercase;
+	background: #eee;
+}
+
+[_form~="search"] button:hover {
+	background: #000;
+}
+
+
+
