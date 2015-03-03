@@ -7,11 +7,21 @@ body {
 
 [_col] {
 	float: left;
-	margin-right: 25px;
+	margin-right: 15px;
+	margin-bottom: 25px;
+	padding-left: 10px;
+}
+
+[_col~="full"] {
+	width: 100%;
 }
 
 [_col~="1/4"] {
 	width: calc(25% - 25px);
+}
+
+[_col~="1/5"] {
+	width: calc(20% - 25px);
 }
 
 [_col~="1/2"] {
@@ -20,6 +30,26 @@ body {
 
 [_col~="3/4"] {
 	width: calc(75% - 25px);
+}
+
+[_col~="yellow"] {
+	background: #F3CA16;
+}
+
+[_col~="pink"] {
+	background: #EF214A;
+}
+
+[_col~="purple"] {
+	background: #703454;
+}
+
+[_col~="teal"] {
+	background: #068180;
+}
+
+[_col]:first-of-type {
+	margin-right: 25px;
 }
 
 /* Typography */
@@ -49,6 +79,7 @@ a {
 
 ul {
 	padding: 0;
+	margin: 0;
 }
 
 [_text] {
@@ -64,7 +95,10 @@ ul {
 
 [_text~="page-head"] {
 	font-size: 2.125em; /*34px*/
-	line-height: 3.4375em; /*55px*/
+	/*line-height: 3.4375em; /*55px*/
+	line-height: 2.62em;
+	color: #fff;
+	/*padding-left: 10px;*/
 }
 
 [_text~="title"] {
@@ -92,6 +126,28 @@ ul {
 	border-left: 2px solid #ccc;
 }
 
+/* Navigation */
+
+[_nav] {
+	font-size: 1.1em;
+	line-height: 1.75em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+[_nav~="main"]:link, [_nav~="main"]:visited {
+	color: hsl(0, 0%, 13%);
+}
+
+[_nav~="main"]:hover {
+	color: hsl(0, 0%, 100%);
+	background: hsl(0, 0%, 13%);
+}
+
+[_nav~="main"]:target, [_nav~="main"]:active {
+	background: #F3CA16;
+}
+
 /* Images */
 
 [_img] {
@@ -99,4 +155,5 @@ ul {
 }
 
 [_img~="logo"] {
+	margin-bottom: 25px;
 }
