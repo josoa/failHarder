@@ -149,11 +149,12 @@ ul {
 	color: hsl(0, 0%, 100%);
 	background: hsl(0, 0%, 13%);
 	padding: 3px;
+	/*transition: background .25s ease-in;*/
 }
 
 [_text~="list"] > li a:hover, [_text~="list"] > li a:target {
-	color: hsl(0, 0%, 33%);
-	background: hsl(0, 0%, 13%);
+	background: hsl(0, 0%, 100%);
+	color: hsl(0, 0%, 13%);
 }
 
 [_text~="list"] > li a:active {
@@ -219,6 +220,8 @@ ul {
 	font-weight: 700;
 	text-transform: uppercase;
 	color: hsl(0, 0%, 13%);
+	/*transition: background .5s ease-in;*/
+
 }
 
 [_nav~="main"]:hover {
@@ -266,39 +269,77 @@ ul {
 /* Form */
 
 [_form] {
-	width: (25% - 25px);
 	padding-bottom: 15px;
 }
 
 [_form] input {
-	width: calc(65% - 15px);
 	height: 10px;
+}
+
+[_form] input, [_form] textarea {
 	padding: 10px;
 	border: 0;
 	background: #EEE;
-
+	margin-bottom: 5px;
 }
 
-[_form] input:focus {
-	background: #555;
+[_form] textarea {
+	height: 100px;
+}
+
+[_form~="search"] input {
+	width: calc(65% - 15px);
+}
+
+[_form~="search"] input:focus {
+	background: #fff;
 	outline: 0;
 }
 
-[_form] button {
+[_form~="search"] button {
 	float: right;
 	border: 0;
 	padding: 0;
 	cursor: pointer;
 	height: 30px;
 	width: 25%;
+	color: hsl(0, 0%, 100%);
+	text-transform: uppercase;
+	background: hsl(0, 0%, 13%);
+}
+
+[_form~="search"] button:hover {
+	background: hsl(0, 0%, 55%);
+}
+
+[_form~="discussion"] {
+	float: right;
+}
+
+[_form~="discussion"] input, [_form~="discussion"] textarea {
+	width: calc(100% - 25px);
+}
+
+[_form~="discussion"] input:focus, [_form~="discussion"] textarea:focus {
+	background: #fff;
+	outline: 0;
+}
+
+
+[_form~="discussion"] button {
+	float: left;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	height: 30px;
+	width: 100%;
 	color: white;
 	text-transform: uppercase;
 	background: #eee;
 }
 
-[_form] button:hover {
+[_form~="discussion"] button:hover {
 	background: #000;
 }
-
 
 
