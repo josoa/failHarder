@@ -193,16 +193,32 @@ ul {
 [_text~="author"] {
 	font-size: 0.875em; /*14px*/
 	line-height: 1.4375em; /*23px*/
+	color: #0EA642;
+	padding-left: 10px;
+	margin-bottom: 15px;
 }
 
 [_text~="quote"] {
 	font-size: 1em; /*16px*/
 	line-height: 1.625em; /*26px*/
-	margin:  1.625em 1.625em 0;
-	padding-left: 1em;
-	font-style: italic;
-	border-left: 2px solid #ccc;
+	/*margin:  1.625em 1.625em 0;*/
+	/*padding-left: 1em;*/
+	/*font-style: italic;*/
+	/*border-left: 2px solid #ccc;*/
 }
+
+[_text~="quote"]:before {
+	content: '"';
+	font-size: 1.5em;
+	color: #0EA642;
+}
+
+[_text~="quote"]:after {
+	content: '"';
+	font-size: 1.5em;
+	color: #0EA642;
+}
+
 
 [_text~="sidebar"] {
 	transform: scale(.85);
@@ -258,6 +274,7 @@ ul {
 }
 
 [_img~="sidebar"] {
+	max-width: 85%;
 	padding-top: 10px;
 	padding-left: 15px;
 }
@@ -287,6 +304,10 @@ ul {
 	height: 100px;
 }
 
+[_form] button:hover {
+	background: #0EA642;
+}
+
 [_form~="search"] input {
 	width: calc(65% - 15px);
 }
@@ -308,9 +329,6 @@ ul {
 	background: hsl(0, 0%, 13%);
 }
 
-[_form~="search"] button:hover {
-	background: hsl(0, 0%, 55%);
-}
 
 [_form~="discussion"] {
 	float: right;
@@ -335,11 +353,7 @@ ul {
 	width: 100%;
 	color: white;
 	text-transform: uppercase;
-	background: #eee;
-}
-
-[_form~="discussion"] button:hover {
-	background: #000;
+	background: hsl(0, 0%, 13%);
 }
 
 
