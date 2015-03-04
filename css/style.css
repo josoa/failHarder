@@ -5,6 +5,10 @@ body {
 	margin: 25px auto;
 }
 
+section {
+	margin-bottom: 25px;
+}
+
 [_col] {
 	float: left;
 	margin-right: 15px;
@@ -99,7 +103,7 @@ ul {
 	font-size: 100%;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
-	margin-bottom: 15px;
+	/*margin-bottom: 15px;*/
 }
 
 [_text~="page-head"], [_text~="title"] {
@@ -248,6 +252,7 @@ ul {
 
 [_text~="sidebar"] {
 	transform: scale(.85);
+	text-align: left;
 }
 
 /* Navigation */
