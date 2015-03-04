@@ -270,7 +270,7 @@ ul {
 	padding-bottom: 15px;
 }
 
-[_form~="search"] input {
+[_form] input {
 	width: calc(65% - 15px);
 	height: 10px;
 	padding: 10px;
@@ -279,12 +279,12 @@ ul {
 
 }
 
-[_form~="search"] input:focus {
+[_form] input:focus {
 	background: #555;
 	outline: 0;
 }
 
-[_form~="search"] button {
+[_form] button {
 	float: right;
 	border: 0;
 	padding: 0;
@@ -296,7 +296,7 @@ ul {
 	background: #eee;
 }
 
-[_form~="search"] button:hover {
+[_form] button:hover {
 	background: #000;
 }
 
