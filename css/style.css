@@ -213,12 +213,12 @@ ul {
 	line-height: 1.4375em; /*23px*/
 	color: #0EA642;
 	padding-left: 10px;
-	margin-bottom: 15px;
 }
 
 [_text~="quote"] {
 	font-size: 1em; /*16px*/
 	line-height: 1.625em; /*26px*/
+	margin-bottom: 0px;
 }
 
 [_text~="quote"]:before {
@@ -233,6 +233,18 @@ ul {
 	color: #0EA642;
 }
 
+[_text~="back"] a:link, [_text~="back"] a:visited {
+	color: #068180;
+}
+
+[_text~="back"] a:hover, [_text~="back"] a:active {
+	font-weight: 700;
+}
+
+
+[_text~="back"]:before {
+	content: '←  ';
+}
 
 [_text~="sidebar"] {
 	transform: scale(.85);
@@ -300,6 +312,10 @@ ul {
 /* Form */
 
 [_form] {
+	margin-bottom: 15px;
+}
+
+[_form]:last-of-type {
 	padding-bottom: 15px;
 }
 
@@ -307,11 +323,11 @@ ul {
 	height: 10px;
 }
 
-[_form] input, [_form] textarea {
+[_form] input, [_form] textarea, [_form] select {
 	padding: 10px;
 	border: 0;
 	background: #EEE;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 [_form] textarea {
