@@ -99,6 +99,7 @@ ul {
 	font-size: 100%;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
+	margin-bottom: 15px;
 }
 
 [_text~="page-head"], [_text~="title"] {
@@ -115,7 +116,8 @@ ul {
 
 [_text~="title"] {
 	font-size: 1.25em; /*20px*/
-	line-height: 2em; /*32px*/
+	/*line-height: 2em; /*32px*/
+	/*margin-bottom: 10px;*/
 }
 
 [_text~="body"] {
@@ -190,6 +192,22 @@ ul {
 	padding: 2px;
 }
 
+[_text~="comment"] {
+	border-left: solid 4px #703454 ;
+	padding-left: 10px; 
+}
+
+[_text~="comment"]:after {
+	content: ' // Reply';
+	color: #068180;
+}
+
+[_text~="reply"] {
+	border-left: solid 4px #EF214A ;
+	padding-left: 10px; 
+	margin-left: 15px;
+}
+
 [_text~="author"] {
 	font-size: 0.875em; /*14px*/
 	line-height: 1.4375em; /*23px*/
@@ -201,10 +219,6 @@ ul {
 [_text~="quote"] {
 	font-size: 1em; /*16px*/
 	line-height: 1.625em; /*26px*/
-	/*margin:  1.625em 1.625em 0;*/
-	/*padding-left: 1em;*/
-	/*font-style: italic;*/
-	/*border-left: 2px solid #ccc;*/
 }
 
 [_text~="quote"]:before {
@@ -241,8 +255,8 @@ ul {
 }
 
 [_nav~="main"]:hover {
-	color: hsl(0, 0%, 100%);
 	background: hsl(0, 0%, 13%);
+	color: #fff;
 }
 
 [_nav~="main"]:target, [_nav~="main"]:active {
