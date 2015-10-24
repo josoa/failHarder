@@ -50,3 +50,5 @@ what's in store for fail harder?
 	one day, we would like to take fail harder abroad and empower people everywhere. 
 
 we're dreaming big but starting small. here, in this room. i hope you leave today and think of your own way to fill in the blank. if you're not failing, what are you doing? 
+
+Join the chat at https://gitter.im/josoa/failHarder
